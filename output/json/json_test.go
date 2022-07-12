@@ -192,12 +192,6 @@ func TestWrapSampleWithSamplePointer(t *testing.T) {
 	assert.NotEqual(t, out, (*sampleEnvelope)(nil))
 }
 
-func TestWrapMetricWithMetricPointer(t *testing.T) {
-	t.Parallel()
-	out := wrapMetric(&metrics.Metric{})
-	assert.NotEqual(t, out, (*metricEnvelope)(nil))
-}
-
 func setThresholds(t *testing.T, out output.Output) {
 	t.Helper()
 
